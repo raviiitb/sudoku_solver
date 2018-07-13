@@ -1,0 +1,8 @@
+main.rb 48923ed09bc92ac310cfa56216647bb5b58f8bc2
+files/process.rb b8a0dcd08c659a82fc29385f8a28d7071816c9ea
+sudoku/problem.rb 7b77d3d2748f6f023ea3ed7f10570ba05c5c568e
+spec/spec_helper.rb a7bfcca9b0d23a408e5aad1381a246c528046b0e
+sudoku/number_array.rb 12e38e93467d871d914c4732630d1f7b95943e08
+spec/files/process_spec.rb 2219ca3f0ace59796e5f0d3f0d8249f9944f7dc4
+spec/sudoku/problem_spec.rb 597a97ed2a52e8f1ec037fd60f81657cd55b8670
+spec/sudoku/number_array_spec.rb 0a0723c600804b3189fbfb270baaad9b9f58b047
