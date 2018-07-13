@@ -13,11 +13,11 @@ module Sudoku
       pos = number_array.first_free_position arr
       # sudoku is solved, there are no free spaces in output_arr
       return arr unless pos
-      ('1'..'9').each do |i|
-        arr[pos] = i
+      ('1'..'9').each do |num|
+        arr[pos] = num
         next unless number_array.valid_sudoku? pos, arr
-        r = solve arr.dup
-        return r if r
+        temp_sol = solve arr.dup
+        return temp_sol if temp_sol
       end
       false
     end
