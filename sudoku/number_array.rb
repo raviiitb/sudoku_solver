@@ -10,7 +10,7 @@ module Sudoku
     def valid_sudoku?(pos, arr)
       return false if duplicates? get_row(pos / 9, arr)
       return false if duplicates? get_col(pos % 9, arr)
-      return false if duplicates? get_square(pos / 9 / 3 * 3 + pos % 9 / 3, arr)
+      return false if duplicates? get_box(pos / 9 / 3 * 3 + pos % 9 / 3, arr)
       true
     end
 
@@ -32,10 +32,10 @@ module Sudoku
       (0..8).map { |row| arr[row * 9 + col_no] }
     end
 
-    # Returns a square of 3x3 from given position
-    def get_square(pos, arr)
-      (0..2).map do |sq_index|
-        arr[(pos / 3 * 3 + sq_index) * 9 + pos % 3 * 3, 3]
+    # Returns a box of 3x3 from given position
+    def get_box(pos, arr)
+      (0..2).map do |box_index|
+        arr[(pos / 3 * 3 + box_index) * 9 + pos % 3 * 3, 3]
       end.flatten
     end
   end
