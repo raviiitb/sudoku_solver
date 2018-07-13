@@ -6,14 +6,14 @@ describe Sudoku::NumberArray do
   describe '#first_free_position' do
     context 'free position exists' do
       it 'returns the first free position in a given array' do
-        result = number_array.first_free_position((0..8).map(&:to_s))
+        result = number_array.first_free_position(('0'..'8').to_a)
         expect(result).to eq 0
       end
     end
 
     context 'free position does not exists' do
       it 'return nil' do
-        result = number_array.first_free_position((1..9).map(&:to_s))
+        result = number_array.first_free_position(('1'..'9').to_a)
         expect(result).to eq nil
       end
     end
