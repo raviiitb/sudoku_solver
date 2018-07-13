@@ -26,7 +26,7 @@ if output_arr
       f.puts output_arr[row * 9, 9].join "\t"
     end
   end
-  puts 'Solved Sudoku problem is saved in output.txt'
+  puts 'Solved Sudoku problem is saved in files/output.txt'
 else
   puts 'Given Sudoku problem is invalid'
 end
