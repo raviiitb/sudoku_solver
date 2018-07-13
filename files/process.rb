@@ -2,7 +2,7 @@ module Files
   # Read Sudoku problem from a file and Write Sudoku solution in a file
   class Process
     class << self
-    	# Read the input file
+      # Read the input file
       def read(file)
         input_arr = []
         File.open(file).each do |line|

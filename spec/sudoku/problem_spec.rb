@@ -23,7 +23,7 @@ describe Sudoku::Problem do
       File.open("spec/fixtures/#{type}.txt").each do |line|
         input_str += line.gsub(/\s/, '').chomp
       end
-      Sudoku::Problem.new input_str.split('')
+      Sudoku::Problem.new input_str.split ''
     end
   end
 end
