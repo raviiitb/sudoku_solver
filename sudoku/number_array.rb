@@ -8,9 +8,9 @@ module Sudoku
 
     # Checks if a sudoku is valid
     def valid_sudoku?(pos, arr)
-      return false if duplicates? get_row(pos / 9, arr)
-      return false if duplicates? get_col(pos % 9, arr)
-      return false if duplicates? get_box(pos / 9 / 3 * 3 + pos % 9 / 3, arr)
+      return false if duplicates?(get_row(pos / 9, arr)) ||
+                      duplicates?(get_col(pos % 9, arr)) ||
+                      duplicates?(get_box(pos / 9 / 3 * 3 + pos % 9 / 3, arr))
       true
     end
 
