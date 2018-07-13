@@ -10,8 +10,8 @@ describe Sudoku::Problem do
       end
     end
 
-    context 'invalid input sudoku' do
-      let(:sudoku) { create_sudoku_instance 'invalid_sudoku' }
+    context 'unsolvable input sudoku' do
+      let(:sudoku) { create_sudoku_instance 'unsolvable_sudoku' }
       it 'returns false' do
         result = sudoku.solve
         expect(result).to eq false
